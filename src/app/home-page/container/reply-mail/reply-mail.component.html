@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="header">
+            <p>{{description["subject"]}}</p>
+       
+            <button type="button" class="close" aria-label="Close" (click)="close()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+    </div>
+    <div class="senderBox">
+            <div class="leftBox">
+                <img src="../../../../assets/userProfile.png"  height="17px">
+                <p style="margin-left: 10px;">{{description["sender"]}}</p>
+            </div>
+            <div class="rightBox">
+                <img src="../../../../assets/strIcon.png"  height="15px">
+                <img src="../../../../assets/sahreAll-icon.png"  height="19px">
+                <img src="../../../../assets/shareLeft-icon.png"  height="19px">
+                <img src="../../../../assets/delteBin-icon.svg"  height="14px">
+               
+            </div>
+           
+    </div>
+    <div class="unreadMessage">
+                <p style="float: left;">2 unread Messages</p>
+                <img src="../../../../assets/dropdown.png"  height="13px" style="margin-left: 10px;">
+    </div>
+    <div class="mainContainer" style="white-space: pre-line;">
+            {{description["message"]}}
+    </div>
+    <div class="replyMessageBox">
+            <div class="boxModel">
+                <div class="header">
+                    <img src="../../../../assets/dropdown.png"  height="13px" style="margin-left: 10px;margin-right: 10px;
+                    margin-top: -10px;">
+                    <p>{{description["sender"]}}</p>
+               </div> 
+               <div class="textArea">
+                   <textarea placeholder="Write a reply message"  [(ngModel)]="replyMessage"></textarea>
+                  
+               </div>
+               <div class="footer">
+                <img src="../../../../assets/attach-icon.png"   height="30px">
+                <img src="../../../../assets/image-icon.png"  height="30px" style="padding: 6px;" width="30px">
+                <img src="../../../../assets/inser.png"  height="23px" style="margin-left: 14px;">
+                <img src="../../../../assets/emojiSmilie-icon.png" height="25px" style="margin-left: 7px;">
+                <button mat-button color="primary" style="margin-left: 20px;" (click)="sendMessage()">Send</button>
+                <button mat-button color="warn" style="margin-left: 20px;" (click)="close()">Close</button>
+             </div>
+            </div>
+    </div>      
+</div>

@@ -1,0 +1,24 @@
+.searchSection
+{
+     width: 34%;
+     height: 35px;
+     background-color: white;
+     display: flex;
+     text-align: center;
+     align-items: center;
+     border: 1px solid rgb(232, 233, 235);
+     
+}
+.searchSection input{ border: none;width: 92%;padding-left: 20px;font-size: 14px;outline: none;}
+mat-toolbar-row{display: flex;justify-content: space-between;}
+.modal-dialog {
+     width: 300px;
+     position: absolute;
+     right: 10px;
+     top: 36px;
+     /* margin: 30px auto; */
+ }
+ .modal-body{cursor: pointer;background-color: #4285F4;;margin-top: 5px;color: #ffffff;text-align: center;}
+ button{outline: none;width: 100%;}
+.profileSection{width: 15%;height:30px;background-color: transparent;display: flex;align-items: center;justify-content: space-evenly;}
+.modal-header{display: flex;flex-direction: column;justify-content: space-between;color: #ffffff;}

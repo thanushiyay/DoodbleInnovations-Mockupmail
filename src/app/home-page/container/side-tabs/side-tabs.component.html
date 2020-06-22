@@ -1,0 +1,45 @@
+<div class="container">
+    <button mat-flat-button (click)="openDialog()">Compose</button>
+     <ul>
+         <li *ngFor="let elements of sideElements" (click)="selectTab(elements.name)">
+             <span   [ngClass]="this.selectedTab==elements.name ? 'active' : ' '">{{elements.name}}</span>
+             <span  *ngIf="elements.msg > 0">{{elements.msg}}</span>
+         </li>
+     </ul>
+     <ul class="secondTab">
+        <li>
+            <span  style="color: black;font-weight: 500;">Circles</span>
+            <span></span>
+        </li>
+        <li>
+            <img src="../../../../assets/friends.png" width="10%" height="9%" style="margin-right:6px;">
+            <span>Friends</span>
+        </li>
+        <li>
+            <img src="../../../../assets/Family.png" width="10%" height="10%" style="margin-right:6px;">
+            <span>Family</span>
+            <span></span>
+        </li>
+        <li>
+            <img src="../../../../assets/Working.png" width="10%" height="10%" style="margin-right:6px;">
+            <span>Working</span>
+            <span></span>
+        </li>
+        <li>
+            <img src="../../../../assets/Clients.png" width="8%" height="10%" style="margin-right:6px;">
+            <span>Drafts</span>
+            <span></span>
+        </li>
+        <li>
+            <img src="../../../../assets/urgent.png" width="8%" height="10%" style="margin-right:6px;">
+            <span>Spam</span>
+            <span></span>
+        </li>
+        <li>
+            <img src="../../../../assets/urgent.png" width="8%" height="10%" style="margin-right:6px;">
+           <span>Bin</span>
+           <span></span>
+        </li>
+    </ul>
+</div>
+<app-main-tabs [selectedVal]="selectedTab"></app-main-tabs>

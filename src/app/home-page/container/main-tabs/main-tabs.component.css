@@ -1,0 +1,25 @@
+.wrapper
+{
+    width:80%;
+    height: 100vh;
+    /* background-color: grey; */
+    float: left;
+    border-left: 1px solid rgb(248, 245, 245);
+    /* border-right: none; */
+}
+
+.header{width: 100%;background-color: rgb(238, 236, 236);height: 8vh;display: flex;align-items: center;padding-left: 20px;}
+.header img{margin-right: 10px;}
+
+mat-tab-group{justify-content: space-evenly;}
+.mat-tab-label{min-width: 320px  !important;}
+.mat-tab-body-content{
+      padding-top: 5px;
+}
+.containerDiv h2{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     align-self: center;
+     margin-top: 20%;
+}

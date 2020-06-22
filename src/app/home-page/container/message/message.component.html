@@ -1,0 +1,14 @@
+<div class="container"  *ngIf="messageData" (click)="openReplyMessageBox(messageData)">
+    <div  class="sqareBox">
+                <img src="../../../../assets/checkBox.png" height="18px">
+    </div>
+    <div class="eyeDrop">
+        <img src="../../../../assets/eyedro[.png" height="18px">
+    </div>  
+    <div class="sender">
+        {{messageData["sender"]}}
+    </div>
+    <div class="subject">
+        {{messageData["subject"]}}
+    </div>
+</div>

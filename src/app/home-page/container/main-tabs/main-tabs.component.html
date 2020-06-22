@@ -1,0 +1,44 @@
+<div class="wrapper">
+    <div class="header">
+        <img src="../../../../assets/checkBox.png" width="18px">
+        <img src="../../../../assets/dropdown.png" width="18px">
+        <img src="../../../../assets/refresh.png" width="23px">
+    </div>
+    <div class="containerDiv">
+        <mat-tab-group mat-align-tabs="center" animationDuration="1000ms" *ngIf="selectedVal=='Inbox'">
+            <mat-tab label="Primary">
+                <div *ngFor="let msg of userMessages.received">
+                    <div *ngIf="msg != undefined">
+                        <app-message [messageData]="msg"></app-message>
+                    </div>
+                  
+                </div>
+            </mat-tab>
+            <mat-tab label="Social">uFFF????</mat-tab>
+            <mat-tab label="Promotions">uFFF????</mat-tab>
+            <mat-tab label="Forum">uFFF????</mat-tab>
+        </mat-tab-group>
+    </div>
+
+    <div class="containerDiv" *ngIf="selectedVal=='Starred'">
+        <h2>No Starred Messages Found..!</h2>
+    </div>
+    <div class="containerDiv" *ngIf="selectedVal=='Important'">
+        <h2>No Important Messages  Found..!</h2>
+    </div>
+    <div class="containerDiv" *ngIf="selectedVal=='Sent Mail'">
+        <div *ngFor="let msg of userMessages.sent">
+
+            <app-message [messageData]="msg"></app-message>
+        </div>
+    </div>
+    <div class="containerDiv" *ngIf="selectedVal=='Drafts'">
+        <h2>No Drafts Messages  Found..!</h2>
+    </div>
+    <div class="containerDiv" *ngIf="selectedVal=='Spam'">
+        <h2>No Spam Messages  Found..!</h2>
+    </div>
+    <div class="containerDiv" *ngIf="selectedVal=='Bin'">
+        <h2>No Bin Messages Found..!</h2>
+    </div>
+</div>

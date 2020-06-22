@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family:Roboto,RobotoDraft,Helvetica,Arial,sans-serif !important;overflow-x: hidden;padding: 0px !important}
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/material/theming';
+.mat-tab-header .mat-tab-labels{
+    justify-content: space-around !important;
+}
+.container{
+    padding: 0px;
+    margin: 0px;
+}
+.cdk-overlay-dark-backdrop {
+    /* background: rgba(0, 0, 0, 0.32); */
+}
+.mat-dialog-container
+{
+            padding: 0px !important;
+}
+.cdk-overlay-pane 
+{
+        margin-left: 54% !important;
+}

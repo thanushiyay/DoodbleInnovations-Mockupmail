@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="header">
+        <mat-toolbar>Mockup Email</mat-toolbar>
+    </div>
+    <div class="mainContainer">
+        <mat-card class="card">
+            <mat-card-header   *ngFor="let user of usersList"   (click)="clickedUser(user)">
+                  <div mat-card-avatar class="header-image"></div>
+                  <mat-card-title>{{user.emailID}}</mat-card-title>
+                  <mat-card-subtitle>user</mat-card-subtitle>
+            </mat-card-header>
+              <mat-card-actions>
+                <button mat-button  (click)="openDialog()">Create New Account</button>
+              </mat-card-actions>
+          </mat-card>
+    </div>
+    <div class="footer">
+        <mat-toolbar>
+            <p>Powered by Thanushiya</p>
+        </mat-toolbar>
+    </div>
+</div>
+<router-outlet></router-outlet>

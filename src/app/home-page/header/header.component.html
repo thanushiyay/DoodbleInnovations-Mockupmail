@@ -1,0 +1,40 @@
+<mat-toolbar>
+    
+    <mat-toolbar-row>
+        <img src="https://img.icons8.com/color/48/000000/google-logo.png"/>
+        <div class="searchSection">
+            <input type="search" placeholder="Search....">
+            <span class="material-icons" style="color: rgb(36, 112, 211);">search</span>
+        </div>
+        <div class="profileSection">
+                <img src="../../../assets/comment.png" width="9%">
+                <img src="../../../assets/dottedMenu.png" width="10%">
+                <img src="../../../assets/notifications.png" width="11%">
+                <img src="../../../assets/userProfile.png"  width="13%" data-backdrop="false" data-toggle="modal" data-target="#basicExampleModal">
+        </div>
+      </mat-toolbar-row>
+</mat-toolbar>
+<app-container></app-container>
+
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="display: flex;justify-content: space-between;">
+        
+        <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+        <button  mat-raised-button  data-dismiss="modal"  color="accent"  style="margin-top: 10px;">
+           close
+        </button>
+      
+      </div>
+      <div  *ngFor="let users of usersList"  (click)="openUser(users)"  data-dismiss="modal">
+            <div class="modal-body"   *ngIf="users.id  != presentVal" > 
+                {{users.emailID}}    
+            </div>          
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
